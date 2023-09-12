@@ -11,23 +11,23 @@ import benefitOneImg from "../public/img/benefit-one.svg";
 import benefitTwoImg from "../public/img/benefit-two.svg";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Compromisos con nuestros clientes",
+  desc: "En micompu.online, nos esforzamos por cultivar relaciones sólidas con nuestros clientes, basadas en la transparencia y el apoyo constante. Estamos aquí para acompañarlos en cada etapa, desde la fase de pre-compra hasta la post-compra.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Entender a nuestros clientes",
+      desc: "Nos dedicamos a comprender las necesidades y preferencias de nuestros clientes para proporcionar un servicio personalizado y satisfactorio.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Optimizar la adquisición",
+      desc: "Nuestro compromiso con la transparencia y el apoyo constante se traduce en un proceso de compra sencillo y sin complicaciones para nuestros clientes.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Mantener una experiencia excepcional",
+      desc: "Nos esforzamos por mantener una experiencia excepcional para nuestros clientes, incluso después de la compra, para asegurar su satisfacción a largo plazo.",
       icon: <CursorArrowRaysIcon />,
     },
   ],

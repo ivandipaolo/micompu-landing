@@ -25,9 +25,8 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle title="Ofrecemos ENVIOS GRATIS EN EL DIA dentro de Buenos Aires">
-          Showroom en Microcentro, Caballito y Olivos: Jueves, Viernes y Sabados
-          de 10 a 16hs.
-        Consulta el catálogo de precios <b>Mayoristas</b>
+        Showroom en Microcentro, Caballito y Olivos: Jueves, Viernes y Sabados
+        de 10 a 16hs. Consulta el catálogo de precios <b>Mayoristas</b>
       </SectionTitle>
       <div className="hidden md:flex flex-col md:flex-row gap-24 justify-center items-center">
         <span>
@@ -73,17 +72,20 @@ const Home = () => {
         pretitle="Testimonios"
         title="Algunas de las opiniones de nuestros clientes"
       >
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        Los testimonios son una poderosa herramienta para fortalecer la
+        confianza y visibilidad de nuestra marca. En esta sección, destacamos a
+        nuestros apreciados clientes para compartir sus experiencias con
+        nosotros
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Preguntas frequentes">
-        Algunas de las preguntas que más les surgen a nuestros clientes tratarémos de respondértelas a continuación.
+        Algunas de las preguntas que más les surgen a nuestros clientes
+        tratarémos de respondértelas a continuación.
       </SectionTitle>
       <Faq />
       {/* <Cta /> */}
       <Footer />
-      <PopupWidget />
+      {/* <PopupWidget /> */}
     </>
   )
 }

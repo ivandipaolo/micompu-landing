@@ -1,60 +1,104 @@
-import Image from "next/image";
-import React from "react";
-import Container from "./container";
+import Image from "next/image"
+import React from "react"
+import Container from "./container"
 
-import userOneImg from "../public/img/user1.jpg";
-import userTwoImg from "../public/img/user2.jpg";
-import userThreeImg from "../public/img/user3.jpg";
+import userOneImg from "../public/img/testimonials/mati.png"
+import userTwoImg from "../public/img/testimonials/sofi.png"
+import userThreeImg from "../public/img/testimonials/mateo.png"
+import userFourImg from "../public/img/testimonials/elmago.png"
+import userFiveImg from "../public/img/testimonials/juanma.png"
+import userSixImg from "../public/img/testimonials/martu.png"
 
-const Testimonials  = () => {
+const Testimonials = () => {
   return (
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              "Muy buen producto,{" "}
+              <Mark>me llego el mismo dia que lo compré</Mark> y cumple con
+              todas mis expectativas 😁."
             </p>
 
             <Avatar
               image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
+              name="Matigomez23"
+              title="Desde Instagram"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+              "<Mark>Excelente atencion</Mark>, contestan en el momento y te ayudan a elegir
+              el porducto que realmente necesitas."
             </p>
 
             <Avatar
               image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              name="Sofimartinezz"
+              title="Desde Instagram"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve seen. I
-              would use this for anything.
+              "Sin dudas el <Mark>mejor precio</Mark>. Pagando con transferencia hacen un 15%
+              de descuento."
             </p>
 
             <Avatar
               image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              name="Mateo89"
+              title="Desde Instagram"
+            />
+          </div>
+        </div>
+        <div className="">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+            <p className="text-2xl leading-normal ">
+              "<Mark>Buen servicio post venta</Mark>. Rompi mi pantalla y lo arreglaron en 2
+              dias sin costo. Unos genios!!"
+            </p>
+
+            <Avatar
+              image={userFourImg}
+              name="Elmagotito"
+              title="Desde Facebook"
+            />
+          </div>
+        </div>
+        <div className="">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+            <p className="text-2xl leading-normal ">
+              "me lo trajeron <Mark>a las pocas horas</Mark> de haberlo comprado!!!."
+            </p>
+
+            <Avatar
+              image={userFiveImg}
+              name="Juanma2021"
+              title="Desde Facebook"
+            />
+          </div>
+        </div>
+        <div className="">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+            <p className="text-2xl leading-normal ">
+              "A tener en cuenta, no contestan los fines de semana."
+            </p>
+
+            <Avatar
+              image={userSixImg}
+              name="Martugrinn"
+              title="Desde Instagram"
             />
           </div>
         </div>
       </div>
     </Container>
-  );
+  )
 }
 
 function Avatar(props) {
@@ -74,7 +118,7 @@ function Avatar(props) {
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
       </div>
     </div>
-  );
+  )
 }
 
 function Mark(props) {
@@ -85,7 +129,7 @@ function Mark(props) {
         {props.children}
       </mark>{" "}
     </>
-  );
+  )
 }
 
-export default Testimonials;
+export default Testimonials
