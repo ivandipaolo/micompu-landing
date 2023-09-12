@@ -7,8 +7,8 @@ import {
   SunIcon,
 } from "@heroicons/react/24/solid";
 
-import benefitOneImg from "../public/img/benefit-one.png";
-import benefitTwoImg from "../public/img/benefit-two.png";
+import benefitOneImg from "../public/img/benefit-one.svg";
+import benefitTwoImg from "../public/img/benefit-two.svg";
 
 const benefitOne = {
   title: "Highlight your benefits",
@@ -34,8 +34,8 @@ const benefitOne = {
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "Formas de pago",
+  desc: "Ofrecemos las maneras más cómodas y actualizadas al mercado actual para concretar tus pagos, en caso de que no encuentres una que se adecue no dudes en contactarnos, estaremos dispuestos en ayudarte con gusto.",
   image: benefitTwoImg,
   bullets: [
     {

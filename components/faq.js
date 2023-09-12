@@ -1,7 +1,7 @@
-import React from "react";
-import Container from "./container";
-import { Disclosure } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import React from "react"
+import Container from "./container"
+import { Disclosure } from "@headlessui/react"
+import { ChevronUpIcon } from "@heroicons/react/24/solid"
 
 const Faq = () => {
   return (
@@ -30,28 +30,31 @@ const Faq = () => {
         ))}
       </div>
     </Container>
-  );
+  )
 }
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
-  },
-  {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
-  },
-  {
-    question: "What is your refund policy? ",
+    question:
+      "¿Qué medidas toma Mi Compu para asegurarse de que los productos lleguen en perfecto estado a los clientes? ",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+    "En Mi Compu, nos tomamos muy en serio la calidad y el estado de nuestros productos. Para asegurarnos de que lleguen en perfecto estado a nuestros clientes, implementamos rigurosos procesos de control de calidad y embalaje. Nuestro equipo verifica cada producto antes de ser enviado para garantizar que cumple con los estándares de calidad establecidos. Además, utilizamos materiales de embalaje resistentes y seguros para proteger los productos durante el transporte. Si a pesar de nuestros esfuerzos, algún producto llegara en condiciones no satisfactorias, contamos con un proceso de devoluciones y cambios para resolver la situación de manera rápida y satisfactoria para nuestros clientes. Tu satisfacción es nuestra prioridad.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "¿Qué sucede si deseo cancelar una orden de compra?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Puedes cancelar una orden siempre y cuando esta no haya sido despachada. Para ello, comunícate con nosotros dentro de las primeras 24 horas de realizada la compra enviando un correo electrónico a atencion.micompu@gmail.com. Dependiendo del caso, se procederá a la devolución del importe pagado o se podrá dejar como crédito para futuras compras.",
   },
-];
+  {
+    question: " ¿Qué pasa si no puedo recibir la entrega de mi pedido?",
+    answer:
+      "n caso de no poder realizar la entrega después de dos intentos, nos comunicaremos contigo para pactar un nuevo día y horario. Si, por causas ajenas a nosotros, la entrega no es posible, se considerará que deseas cancelar la transacción y procederemos a la devolución del importe correspondiente al producto (excluyendo costos de envío).",
+  },
+  {
+    question: " ¿Qué sucede si un producto que deseo comprar no está disponible? ",
+    answer:
+      "En el caso de que un producto que deseas adquirir no esté disponible, te invitamos a ponerte en contacto con nosotros a través de nuestro correo electrónico atencion.micompu@gmail.com. Estaremos encantados de asistirte y proporcionarte información sobre disponibilidad, alternativas o cualquier otra consulta que puedas tener. Nuestro objetivo es brindarte la mejor experiencia de compra posible, y estaremos disponibles para ayudarte en todo lo que necesites.",
+  },
+]
 
-export default Faq;
+export default Faq
