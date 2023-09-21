@@ -1,73 +1,69 @@
-import Head from "next/head"
 import Hero from "../components/hero"
-import Navbar from "../components/navbar"
-import SectionTitle from "../components/sectionTitle"
+import SectionTitle from "../components/SectionTitle"
 
-import { benefitOne, benefitTwo } from "../components/data"
-import Video from "../components/video"
+import { benefitOne } from "../components/data"
 import Benefits from "../components/benefits"
-import Footer from "../components/footer"
 import Testimonials from "../components/testimonials"
 import Cta from "../components/cta"
 import Faq from "../components/faq"
-import PopupWidget from "../components/popupWidget"
 import Image from "next/image"
+import { shopifyClient, parseShopifyResponse } from "../lib/shopify.js"
+import { useEffect, useState } from "react"
+import ProductList from "../components/ProductList"
+import Container from "../components/container"
 
 const Home = () => {
-  return (
-    <>
-      <Head>
-        <title>MiCompu.Online</title>
-        <meta name="description" content="Landing page de MiCompu.Online" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
+  const [prods, setProds] = useState([])
 
-      <Navbar />
+  useEffect(() => {
+    const fetchData = async () => {
+      setProds(parseShopifyResponse(await shopifyClient.product.fetchAll()))
+    }
+    fetchData()
+  }, [])
+  return (
+    <div>
       <Hero />
-      <SectionTitle title="Ofrecemos ENVIOS GRATIS EN EL DIA dentro de Buenos Aires">
-        Showroom en Microcentro, Caballito y Olivos: Jueves, Viernes y Sabados
-        de 10 a 16hs. Consulta el catálogo de precios <b>Mayoristas</b>
-      </SectionTitle>
-      <div className="hidden md:flex flex-col md:flex-row gap-24 justify-center items-center">
-        <span>
-          <Image
-            src="/img/maps/microcentro.png"
-            alt="N"
-            width="400"
-            height="32"
-            className="w-48 lg:w-80 rounded-xl"
-          />
-        </span>
-        <span>
-          <Image
-            src="/img/maps/caballito.png"
-            alt="N"
-            width="400"
-            height="32"
-            className="w-48 lg:w-80 rounded-xl"
-          />
-        </span>
-        <span>
-          <Image
-            src="/img/maps/olivos.png"
-            alt="N"
-            width="400"
-            height="32"
-            className="w-48 lg:w-80 rounded-xl"
-          />
-        </span>
-      </div>
+
+      <Container>
+        <ProductList products={prods} title="Productos destacados" />
+      </Container>
+      <Container>
+        <SectionTitle pretitle="Showrooms" title="Ofrecemos ENVIOS GRATIS EN EL DIA dentro de Buenos Aires">
+          Showroom en Microcentro, Caballito y Olivos: Jueves, Viernes y Sabados
+          de 10 a 16hs. Consulta el catálogo de precios <b>Mayoristas</b>
+        </SectionTitle>
+        <div className="hidden md:flex flex-col md:flex-row gap-24 justify-center items-center">
+          <span>
+            <Image
+              src="/img/maps/microcentro.png"
+              alt="N"
+              width="400"
+              height="32"
+              className="w-48 lg:w-80 rounded-xl hover:scale-125 duration-700"
+            />
+          </span>
+          <span>
+            <Image
+              src="/img/maps/caballito.png"
+              alt="N"
+              width="400"
+              height="32"
+              className="w-48 lg:w-80 rounded-xl hover:scale-125 duration-700"
+            />
+          </span>
+          <span>
+            <Image
+              src="/img/maps/olivos.png"
+              alt="N"
+              width="400"
+              height="32"
+              className="w-48 lg:w-80 rounded-xl hover:scale-125 duration-700"
+            />
+          </span>
+        </div>
+      </Container>
       <Benefits data={benefitOne} />
-      {/* <Benefits imgPos="right" data={benefitTwo} /> */}
-      {/* <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs"
-      >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Video /> */}
       <SectionTitle
         pretitle="Testimonios"
         title="Algunas de las opiniones de nuestros clientes"
@@ -84,9 +80,7 @@ const Home = () => {
       </SectionTitle>
       <Faq />
       {/* <Cta /> */}
-      <Footer />
-      {/* <PopupWidget /> */}
-    </>
+    </div>
   )
 }
 

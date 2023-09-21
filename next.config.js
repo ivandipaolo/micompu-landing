@@ -3,5 +3,8 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ['cdn.shopify.com'],
+  },
   output: "standalone",
 };

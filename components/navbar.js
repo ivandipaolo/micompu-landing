@@ -108,7 +108,7 @@ const Navbar = () => {
                   key={index}
                   href={item.ref}
                   target="_blank"
-                  className={`w-full px-5 py-3 ml-4 dark:text-white hover:text-gray-600 hover:font-semibold font-normal text-lg rounded-md hover:bg-indigo-600 hover:bg-opacity-30 transition-all duration-300 ease-in-out transform ${
+                  className={`w-full px-5 py-3 ml-4 dark:text-white hover:text-gray-600 font-normal text-lg rounded-md hover:bg-indigo-600 hover:bg-opacity-10 transition-all duration-300 ease-in-out transform ${
                     item.text === "Soporte Especializado" &&
                     "bg-indigo-600 text-white"
                   }`}
@@ -120,9 +120,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item bg-gray-600 bg-opacity-20 p-3 rounded-md dark:bg-opacity-50 hover:bg-gray-200  transition-all duration-300 ease-in-out transform">
-          <ThemeChanger />
-        </div>
+        <ThemeChanger />
       </nav>
     </div>
   )
