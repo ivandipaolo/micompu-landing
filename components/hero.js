@@ -35,7 +35,7 @@ const Hero = () => {
                 }}
               />
             </h1>
-            <p className="py-5 text-xl font-extralight font-sans leading-loose text-gray-500  lg:text-xl xl:text-2xl dark:text-gray-300">
+            <p className="py-5 text-sm md:text-xl font-extralight font-sans leading-loose text-gray-500  lg:text-xl xl:text-2xl dark:text-gray-300">
               Somos Importadores directos de Estados Unidos y trabajamos con una
               línea de productos de informática a un excelente precio. Además
               potenciamos los equipos para que tengan un mejor rendimiento y así
@@ -49,7 +49,7 @@ const Hero = () => {
                 href=""
                 target="_blank"
                 rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
+                className="px-8 mb-5 md:mb-0 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
               >
                 Comunicarse con un asesor
               </a>

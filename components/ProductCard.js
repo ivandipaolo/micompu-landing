@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
   }, [product])
 
   return (
-    <div className="gap-0 flex flex-col hover:border hover:border-indigo-600 hover:scale-110 justify-center text-center items-center relative group hover:bg-gray-100 hover:bg-opacity-5 transition duration-300 m-12 pb-20 p-7 hover:rounded-lg">
+    <div className="gap-0 flex flex-col hover:border hover:border-indigo-600 md:w-1/4 hover:scale-110 justify-center text-center items-center relative group hover:bg-gray-100 hover:bg-opacity-5 px-5 transition duration-300 m-2 md:px-0 md:m-12 md:pb-20 p-3 md:p-7 hover:rounded-lg">
       <Image
         src={prodImg?.src ?? ""}
         width={prodImg?.width ?? "450"}
@@ -20,10 +20,10 @@ const ProductCard = ({ product }) => {
         alt="Hero Illustration"
         loading="eager"
       />
-      <p className="font-medium font-teko w-4/4 text-3xl text-center">
+      <p className="font-medium font-teko w-4/4  text-lg md:text-3xl text-center">
         {product?.title}
       </p>
-      <HighlightedWord extraCSS="font-semibold text-2xl text-center">
+      <HighlightedWord extraCSS="font-semibold text-lg md:text-2xl text-center">
         ${product?.variants?.[0]?.price?.amount.split(".")[0]}
       </HighlightedWord>
     </div>

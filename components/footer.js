@@ -4,14 +4,26 @@ import React from "react"
 import Container from "./container"
 
 export default function Footer() {
-  const navigation = [{text: "Quiénes somos", ref:'https://micompu.online/pages/formas-de-pago'}]
+  const navigation = [
+    {
+      text: "Quiénes somos",
+      ref: "https://micompu.online/pages/formas-de-pago",
+    },
+  ]
   const legal = [
-    { text:'Devoluciones y Garantías', ref:'https://micompu.online/pages/devoluciones-y-garantias'},
-    { text:'Terminos y Condiciones', ref:'https://micompu.online/pages/privacidad'},
+    {
+      text: "Devoluciones y Garantías",
+      ref: "https://micompu.online/pages/devoluciones-y-garantias",
+    },
+    {
+      text: "Terminos y Condiciones",
+      ref: "https://micompu.online/pages/privacidad",
+    },
   ]
   const ayudas = [
     {
-      text:'Formas de Pago', ref:'https://micompu.online/pages/formas-de-pago'
+      text: "Formas de Pago",
+      ref: "https://micompu.online/pages/formas-de-pago",
     },
   ]
   return (
@@ -19,7 +31,7 @@ export default function Footer() {
       <Container>
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <div>
+            <div className="md:inline-block flex flex-col justify-center items-center">
               {" "}
               <Link
                 href="/"
