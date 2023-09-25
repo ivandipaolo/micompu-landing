@@ -1,5 +1,5 @@
 import Hero from "../components/hero"
-import SectionTitle from "../components/SectionTitle"
+import SecTitle from "../components/SecTitle"
 
 import { benefitOne } from "../components/data"
 import Benefits from "../components/benefits"
@@ -37,13 +37,13 @@ const Home = () => {
         </div>
       </Container>
       <Container>
-        <SectionTitle
+        <SecTitle
           pretitle="Showrooms"
           title="Ofrecemos ENVIOS GRATIS EN EL DIA dentro de Buenos Aires"
         >
           Showroom en Microcentro, Caballito y Olivos: Jueves, Viernes y Sabados
           de 10 a 16hs. Consulta el catálogo de precios <b>Mayoristas</b>
-        </SectionTitle>
+        </SecTitle>
         <div className="hidden md:flex flex-col md:flex-row gap-24 justify-center items-center">
           <span>
             <Image
@@ -75,7 +75,7 @@ const Home = () => {
         </div>
       </Container>
       <Benefits data={benefitOne} />
-      <SectionTitle
+      <SecTitle
         pretitle="Testimonios"
         title="Algunas de las opiniones de nuestros clientes"
       >
@@ -83,12 +83,12 @@ const Home = () => {
         confianza y visibilidad de nuestra marca. En esta sección, destacamos a
         nuestros apreciados clientes para compartir sus experiencias con
         nosotros
-      </SectionTitle>
+      </SecTitle>
       <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Preguntas frequentes">
+      <SecTitle pretitle="FAQ" title="Preguntas frequentes">
         Algunas de las preguntas que más les surgen a nuestros clientes
         tratarémos de respondértelas a continuación.
-      </SectionTitle>
+      </SecTitle>
       <Faq />
       {/* <Cta /> */}
     </div>

@@ -11,12 +11,12 @@ const ProductCard = ({ product }) => {
   }, [product])
 
   return (
-    <div className="gap-0 flex flex-col hover:border hover:border-indigo-600 md:w-1/4 hover:scale-110 justify-center text-center items-center relative group hover:bg-gray-100 hover:bg-opacity-5 px-5 transition duration-300 m-2 md:px-0 md:m-12 md:pb-20 p-3 md:p-7 hover:rounded-lg">
+    <div className="gap-0 flex w-full flex-col hover:border hover:border-indigo-600 md:w-1/4 hover:scale-110 justify-center text-center items-center relative group hover:bg-gray-100 hover:bg-opacity-5 px-5 transition duration-300 md:px-0 md:m-12 md:pb-20 p-3 md:p-7 hover:rounded-lg">
       <Image
         src={prodImg?.src ?? ""}
         width={prodImg?.width ?? "450"}
         height={prodImg?.height ?? "450"}
-        className="object-fill w-4/4 -mb-5"
+        className="object-fill w-full -mb-5"
         alt="Hero Illustration"
         loading="eager"
       />

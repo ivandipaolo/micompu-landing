@@ -1,7 +1,7 @@
 import React from "react"
 import Container from "./container"
 
-const SectionTitle = ({ align, pretitle, title, children }) => {
+const SecTitle = ({ align, pretitle, title, children }) => {
   return (
     <Container
       className={`flex w-full flex-col ${
@@ -29,4 +29,4 @@ const SectionTitle = ({ align, pretitle, title, children }) => {
   )
 }
 
-export default SectionTitle
+export default SecTitle
