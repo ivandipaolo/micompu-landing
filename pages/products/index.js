@@ -1,8 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { parseShopifyResponse, shopifyClient } from '../../lib/shopify';
+import React, { useEffect, useState } from "react"
+import { parseShopifyResponse, shopifyClient } from "../../lib/shopify"
 
-const index = () => {
-  const [ products, setProducts ]  = useState([])
+const Index = () => {
+  const [products, setProducts] = useState([])
+  const [filteredProducts2, setFilteredProducts2] = useState([])
+  const [filters, setFilters] = useState({
+    showInStockOnly: false,
+    selectedCategory: "",
+    priceRange: [0, 1000000],
+  })
+
+  const isInStock = (product, showInStockOnly) =>
+    !showInStockOnly || product.variants[0].available
+
+  const matchesCategory = (product, selectedCategory) =>
+    !selectedCategory || product.productType === selectedCategory
+
+  const isInRange = (product, priceRange) =>
+    product.variants[0].price >= priceRange[0] &&
+    product.variants[0].price <= priceRange[1]
 
   useEffect(() => {
     const fetchData = async () => {
@@ -11,37 +27,32 @@ const index = () => {
     fetchData()
   }, [])
 
-  const [filters, setFilters] = useState({
-    showInStockOnly: false,
-    selectedCategory: '',
-    priceRange: [0, 1000] // Default price range
-  });
+  useEffect(() => {
+    setFilteredProducts2(
+      products?.filter(
+        (product) =>
+          isInStock(product, filters.showInStockOnly) &&
+          matchesCategory(product, filters.selectedCategory) &&
+          isInRange(product, filters.priceRange)
+      )
+    )
+  }, [products, filters])
 
-  const filteredProducts = products?.filter(product => {
-    const isInStock = !filters.showInStockOnly || product.variants[0].available;
-    const matchesCategory = !filters.selectedCategory || product.productType === filters.selectedCategory;
-    const isInRange = product.variants[0].price >= filters.priceRange[0] && product.variants[0].price <= filters.priceRange[1];
-
-    return isInStock && matchesCategory && isInRange;
-  });
+  console.log(filteredProducts2)
 
   const handleToggleInStock = () => {
-    setFilters({ ...filters, showInStockOnly: !filters.showInStockOnly });
-  };
+    setFilters({ ...filters, showInStockOnly: !filters.showInStockOnly })
+  }
 
   const handleCategoryChange = (e) => {
-    setFilters({ ...filters, selectedCategory: e.target.value });
-  };
+    setFilters({ ...filters, selectedCategory: e.target.value })
+  }
 
   const handlePriceRangeChange = (e) => {
-    const minPrice = parseFloat(e.target.value.split(',')[0]);
-    const maxPrice = parseFloat(e.target.value.split(',')[1]);
-    setFilters({ ...filters, priceRange: [minPrice, maxPrice] });
-  };
-
-  // if (isLoading) {
-  //   return <div className="text-center">Loading...</div>;
-  // }
+    const minPrice = parseFloat(e.target.value.split(",")[0])
+    const maxPrice = parseFloat(e.target.value.split(",")[1])
+    setFilters({ ...filters, priceRange: [minPrice, maxPrice] })
+  }
 
   return (
     <div className="max-w-4xl mx-auto p-8">
@@ -65,10 +76,8 @@ const index = () => {
           className="border rounded p-2 w-full"
         >
           <option value="">All Categories</option>
-          {/* Populate options dynamically based on your product categories */}
-          <option value="Category1">Category 1</option>
-          <option value="Category2">Category 2</option>
-          {/* Add more options as needed */}
+          <option value="Notebooks">Notebooks</option>
+          <option value="iPhones">iPhones</option>
         </select>
       </div>
 
@@ -88,15 +97,16 @@ const index = () => {
         </div>
       </div>
 
-      {/* <ul className="list-none p-0">
-        {filteredProducts?.map(product => (
+      <ul className="list-none p-0">
+        {filteredProducts2?.map((product) => (
           <li key={product.id} className="mb-2">
-            <span className="font-bold mr-2">{product.title}</span> - ${product.variants[0].price}
+            <span className="font-bold mr-2">{product.title}</span> - $
+            {product.variants[0].price}
           </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
-  );
-};
+  )
+}
 
-export default index;
+export default Index

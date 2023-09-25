@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
   }, [product])
 
   return (
-    <div className="gap-0 flex flex-col hover:scale-110 justify-center text-center items-center relative group hover:bg-gray-100 hover:bg-opacity-5 transition duration-300 m-12 pb-20 p-7 hover:rounded-lg">
+    <div className="gap-0 flex flex-col hover:border hover:border-indigo-600 hover:scale-110 justify-center text-center items-center relative group hover:bg-gray-100 hover:bg-opacity-5 transition duration-300 m-12 pb-20 p-7 hover:rounded-lg">
       <Image
         src={prodImg?.src ?? ""}
         width={prodImg?.width ?? "450"}

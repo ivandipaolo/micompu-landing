@@ -13,11 +13,11 @@ import ProductList from "../components/ProductList"
 import Container from "../components/container"
 
 const Home = () => {
-  const [prods, setProds] = useState([])
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
-      setProds(parseShopifyResponse(await shopifyClient.product.fetchAll()))
+      setProducts(parseShopifyResponse(await shopifyClient.product.fetchAll()))
     }
     fetchData()
   }, [])
@@ -26,10 +26,21 @@ const Home = () => {
       <Hero />
 
       <Container>
-        <ProductList products={prods} title="Productos destacados" />
+        <div className="flex justify-center items-center flex-col mt-20">
+          <div className="rounded-md border border-transparent cursor-default hover:bg-opacity-5 duration-700 border-white hover:border-indigo-600 first-letter pt-6 pb-4 px-7">
+            <h2 className="inline-block text-center font-teko font-light text-8xl underline relative">
+              Productos <span className="dark:text-white">destacados</span>
+            </h2>
+          </div>
+
+          <ProductList products={products} />
+        </div>
       </Container>
       <Container>
-        <SectionTitle pretitle="Showrooms" title="Ofrecemos ENVIOS GRATIS EN EL DIA dentro de Buenos Aires">
+        <SectionTitle
+          pretitle="Showrooms"
+          title="Ofrecemos ENVIOS GRATIS EN EL DIA dentro de Buenos Aires"
+        >
           Showroom en Microcentro, Caballito y Olivos: Jueves, Viernes y Sabados
           de 10 a 16hs. Consulta el catálogo de precios <b>Mayoristas</b>
         </SectionTitle>

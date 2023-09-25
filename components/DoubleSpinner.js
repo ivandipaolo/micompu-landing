@@ -28,8 +28,8 @@ const DoubleSpinner = () => {
             y2="1025"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#0076DE"></stop>
-            <stop offset="1" stopColor="#0076DE" stopOpacity="0"></stop>
+            <stop stopColor="#4f46e5"></stop>
+            <stop offset="1" stopColor="#4f46e5" stopOpacity="0"></stop>
           </linearGradient>
         </defs>
       </svg>
@@ -58,8 +58,8 @@ const DoubleSpinner = () => {
             y2="913"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#0076DE"></stop>
-            <stop offset="1" stopColor="#0076DE" stopOpacity="0"></stop>
+            <stop stopColor="#4f46e5"></stop>
+            <stop offset="1" stopColor="#4f46e5" stopOpacity="0"></stop>
           </linearGradient>
         </defs>
       </svg>

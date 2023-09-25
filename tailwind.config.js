@@ -37,12 +37,24 @@ module.exports = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
+        shimmer: {
+          "0%": {
+            transform: "translateX(0%)",
+          },
+          "50%": {
+            transform: "translateX(100%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+          },
+        },
       },
       animation: {
         "infinite-scroll": "infinite-scroll 25s linear infinite",
         "bounce-low": "bounce-low 5s infinite",
         "spin-slow": "spin 2s linear infinite",
         "spin-reverse-slow": "spin-reverse 4s linear infinite",
+        shimmer: "shimmer 1s infinite",
       },
       colors: {
         trueGray: colors.neutral,
