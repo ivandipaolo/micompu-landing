@@ -25,7 +25,7 @@ const Home = () => {
     <div>
       <Hero />
 
-      <Container>
+      {/* <Container>
         <div className="flex justify-center items-center flex-col lg:mt-20">
           <div className="rounded-md border border-opacity-0 cursor-default hover:bg-opacity-5 duration-700 border-white hover:border-indigo-600 first-letter pt-6 pb-4 px-7">
             <h2 className="inline-block text-center font-teko font-light text-4xl lg:text-8xl underline relative">
@@ -35,7 +35,7 @@ const Home = () => {
 
           <ProductList products={products} />
         </div>
-      </Container>
+      </Container> */}
       <Container>
         <SecTitle
           pretitle="Showrooms"
